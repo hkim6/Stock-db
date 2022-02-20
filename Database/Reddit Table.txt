@@ -1,0 +1,22 @@
+                '''
+                        CREATE TABLE stock_data.reddit_users(
+                            id			    SERIAL PRIMARY KEY,
+                            username        VARCHAR(50) NOT NULL UNIQUE,
+                            num_posts       INTEGER,
+                            tot_submissions INTEGER,
+                            first_seen_wsb  DATE NOT NULL,
+                            account_age     INTERVAL);
+                        CREATE TABLE stock_data.reddit_posts(
+                            id			    SERIAL PRIMARY KEY,
+                            title           VARCHAR(1000) NOT NULL,
+                            stock_id        INTEGER REFERENCES stock_data.stocks (id) NOT NULL,
+                            user_id         INTEGER REFERENCES stock_data.reddit_users (id) NOT NULL),
+                            post_date       DATE NOT NULL,
+                            com_count       INTEGER NOT NULL,
+                            tag             VARCHAR(5) NOT NULL UNIQUE,
+                            ups             INTEGER NOT NULL,
+                            downs           INTEGER NOT NULL,
+                            bullish         BOOLEAN,
+                            bearish         BOOLEAN,
+                            num_awards      INTEGER NOT NULL);
+                '''

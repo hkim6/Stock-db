@@ -1,0 +1,18 @@
+-Post-
+User_Id - author
+Title - title
+Stock_Id - N/A
+Date Posted - created
+Number of Comments - num_comments
+Tag (link_falir_text) - link_flair_text
+Bullish or Bearish - N/A
+Ups - ups
+Downs - downs
+Awards Received  - total_awards_received
+
+-User-
+User_Id
+Total Comments
+Total Submission
+First seen in WSB
+Account Age
